@@ -55,7 +55,8 @@ func ApplyDmg(dmg :int):
 	
 	if Health <= 0:
 		Health = 0
-		Global.Health = 0
+#		Global.Health = 0
+		Global.reset_health()
 		get_tree().reload_current_scene()
 	
 

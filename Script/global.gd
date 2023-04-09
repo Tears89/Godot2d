@@ -20,5 +20,7 @@ onready var hud = $HUD
 func _ready():
 	pass # Replace with function body.
 
-
+func reset_health():
+	Health = 100
+	hud.set_health_bar(Health)
 
