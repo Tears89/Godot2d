@@ -13,6 +13,8 @@ var Coin = 0
 
 var Health = 100
 
+func _ready():
+	Health = Global.Health
 
 func _physics_process(delta):
 	Movement = move_and_slide(Movement, UP)
@@ -46,12 +48,14 @@ func ApplyDmg(dmg :int):
 		return
 	
 	Health -= dmg
+	Global.Health -= dmg
 	prints("Health:", Health)
 	Global.hud.set_health_bar(Health)
 	$DamageTimer.start()
 	
 	if Health <= 0:
 		Health = 0
+		Global.Health = 0
 		get_tree().reload_current_scene()
 	
 

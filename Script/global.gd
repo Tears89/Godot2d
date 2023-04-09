@@ -5,6 +5,7 @@ func set_coins(value):
 	coins = value
 	hud.set_coins(value)
 
+var Health = 100
 
 var player_health = 100
 
