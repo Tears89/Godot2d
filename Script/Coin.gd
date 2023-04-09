@@ -7,7 +7,7 @@ signal coin_collected
 func _on_Coin_body_entered(body):
 	
 	if body.name == "Player":
-		body.Coin += 1
+		Global.coins += 1
 		queue_free()
-		emit_signal("coin_collected")
+#		emit_signal("coin_collected")
 	pass # Replace with function body.

@@ -14,6 +14,10 @@ config/name="Godot Game 2d"
 run/main_scene="res://Worlds/World_01.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Preabs/Global.tscn"
+
 [display]
 
 window/size/width=1280

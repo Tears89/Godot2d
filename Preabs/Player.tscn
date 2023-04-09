@@ -40,7 +40,7 @@ scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 position = Vector2( 0, 1 )
 shape = SubResource( 2 )
 
@@ -48,3 +48,6 @@ shape = SubResource( 2 )
 current = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 10 )]
+
+[node name="DamageTimer" type="Timer" parent="."]
+one_shot = true

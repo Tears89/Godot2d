@@ -42,7 +42,13 @@ func _input(event):
 
 
 func ApplyDmg(dmg :int):
+	if not $DamageTimer.is_stopped():
+		return
+	
 	Health -= dmg
+	prints("Health:", Health)
+	Global.hud.set_health_bar(Health)
+	$DamageTimer.start()
 	
 	if Health <= 0:
 		Health = 0

@@ -5,9 +5,11 @@ var coins = 0
 func _ready():
 	$Coins.text = String(coins) 
 
+func set_health_bar(value):
+	$HealthBar.value = value
+	pass
 
-
-
-func _on_Coin_coin_collected():
-	coins = coins + 1
-	_ready()
+func set_coins(value):
+#	coins = coins + 1
+	$Coins.text = str(value)
+#	_ready()
