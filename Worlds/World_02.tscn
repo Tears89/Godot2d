@@ -1,28 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tailsets/TileSet_01.tres" type="TileSet" id=1]
 [ext_resource path="res://Preabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Preabs/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Preabs/Ship.tscn" type="PackedScene" id=4]
-[ext_resource path="res://AubreyPro.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://Graphics/Coin/Coin-1.png.png" type="Texture" id=6]
-[ext_resource path="res://Script/HUD.gd" type="Script" id=7]
 [ext_resource path="res://Preabs/enemy.tscn" type="PackedScene" id=8]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0509804, 0.0509804, 0.0509804, 0.392157 )
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 40
-font_data = ExtResource( 5 )
 
 [node name="World_01" type="Node2D"]
 
@@ -36,46 +18,6 @@ tile_data = PoolIntArray( 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0
 
 [node name="Player" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 22, 236.5 )
-
-[node name="HUD" type="CanvasLayer" parent="."]
-offset = Vector2( -400, -200 )
-transform = Transform2D( 1, 0, 0, 1, -400, -200 )
-script = ExtResource( 7 )
-
-[node name="Panel" type="Panel" parent="HUD"]
-margin_left = 423.0
-margin_top = 248.0
-margin_right = 553.0
-margin_bottom = 313.0
-custom_styles/panel = SubResource( 1 )
-
-[node name="TextureRect" type="TextureRect" parent="HUD"]
-margin_left = 423.0
-margin_top = 248.0
-margin_right = 475.0
-margin_bottom = 313.0
-texture = ExtResource( 6 )
-expand = true
-
-[node name="X" type="Label" parent="HUD"]
-margin_left = 472.0
-margin_top = 256.0
-margin_right = 492.0
-margin_bottom = 300.0
-custom_colors/font_color = Color( 1, 0.784314, 0.0156863, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "x"
-valign = 1
-
-[node name="Coins" type="Label" parent="HUD"]
-margin_left = 496.0
-margin_top = 256.0
-margin_right = 538.0
-margin_bottom = 300.0
-custom_colors/font_color = Color( 1, 0.784314, 0.0156863, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "##"
-valign = 1
 
 [node name="coins" type="Node2D" parent="."]
 
@@ -258,35 +200,3 @@ position = Vector2( 4981, 668 )
 
 [node name="enemy" parent="enemy" instance=ExtResource( 8 )]
 position = Vector2( 1429.06, 653.47 )
-
-[connection signal="coin_collected" from="coins/Coin" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin2" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin3" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin4" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin5" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin6" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin7" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin8" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin9" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin10" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin11" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin13" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin14" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin15" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin16" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin17" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin18" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin19" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin20" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin21" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin22" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin23" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin24" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin25" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin26" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin27" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin28" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin29" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin30" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin31" to="HUD" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="coins/Coin12" to="HUD" method="_on_Coin_coin_collected"]

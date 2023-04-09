@@ -36,11 +36,11 @@ func _process(delta):
 #			body.ApplyDmg(DAMAGE_AMOUNT*delta)
 #		pass
 
-#func _on_body_entered(body):
-#	if body.is_in_group("Player"):
-#		body.ApplyDmg(DAMAGE_AMOUNT*5)
-#		pass
-#	pass
+func _on_body_entered(body):
+	if body.is_in_group("Player"):
+		body.ApplyDmg(DAMAGE_AMOUNT*5)
+		pass
+	pass
 
 
 
