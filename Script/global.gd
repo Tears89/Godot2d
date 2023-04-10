@@ -24,3 +24,7 @@ func reset_health():
 	Health = 100
 	hud.set_health_bar(Health)
 
+func reset_coins():
+	coins = 0
+	hud.set_coins(coins)
+	

@@ -6,10 +6,10 @@ var direction = 1;
 const Gravity = 15
 const Speed = 200;
 const Floor = Vector2(0, -1)
-export var DAMAGE_AMOUNT = 10
+export var DAMAGE_AMOUNT = 50
 
 func _ready():
-#	$Sprite.play("run")
+	$Sprite.play("run")
 	$Area2D.connect("body_entered", self, "_on_body_entered")
 	
 
@@ -38,7 +38,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		body.ApplyDmg(DAMAGE_AMOUNT*5)
+		body.ApplyDmg(DAMAGE_AMOUNT)
 		pass
 	pass
 

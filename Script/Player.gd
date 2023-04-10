@@ -59,7 +59,10 @@ func ApplyDmg(dmg :int):
 		Global.reset_health()
 		get_tree().reload_current_scene()
 	
-
+	if Coin <= 0:
+		Coin = 0
+		Global.reset_coins()
+		
 
 func Keyboard():
 	

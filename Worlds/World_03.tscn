@@ -1,0 +1,197 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Worlds/World_02.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Preabs/Ship.tscn" type="PackedScene" id=2]
+
+[node name="World_01" instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="." index="0"]
+position = Vector2( -105, 99 )
+tile_data = PoolIntArray( 393242, 3, 0, 458775, 3, 0, 458778, 7, 0, 458780, 3, 0, 458789, 0, 0, 458790, 1, 0, 458791, 1, 0, 458792, 1, 0, 458793, 1, 0, 458794, 1, 0, 458795, 1, 0, 458796, 1, 0, 458797, 1, 0, 458798, 1, 0, 458799, 1, 0, 458800, 2, 0, 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 2, 0, 524311, 7, 0, 524314, 11, 0, 524316, 7, 0, 524322, 3, 0, 524325, 4, 0, 524326, 5, 0, 524327, 5, 0, 524328, 5, 0, 524329, 5, 0, 524330, 5, 0, 524331, 5, 0, 524332, 5, 0, 524333, 5, 0, 524334, 5, 0, 524335, 5, 0, 524336, 6, 0, 589824, 4, 0, 589825, 5, 0, 589826, 5, 0, 589827, 5, 0, 589828, 5, 0, 589829, 5, 0, 589830, 5, 0, 589831, 5, 0, 589832, 5, 0, 589833, 5, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 5, 0, 589839, 5, 0, 589840, 5, 0, 589841, 5, 0, 589842, 5, 0, 589843, 5, 0, 589844, 6, 0, 589847, 11, 0, 589852, 11, 0, 589855, 3, 0, 589858, 7, 0, 589861, 8, 0, 589862, 9, 0, 589863, 9, 0, 589864, 9, 0, 589865, 9, 0, 589866, 9, 0, 589867, 9, 0, 589868, 9, 0, 589869, 9, 0, 589870, 9, 0, 589871, 9, 0, 589872, 10, 0, 589874, 3, 0, 655360, 4, 0, 655361, 5, 0, 655362, 5, 0, 655363, 5, 0, 655364, 5, 0, 655365, 5, 0, 655366, 5, 0, 655367, 5, 0, 655368, 5, 0, 655369, 5, 0, 655370, 5, 0, 655371, 5, 0, 655372, 5, 0, 655373, 5, 0, 655374, 5, 0, 655375, 5, 0, 655376, 5, 0, 655377, 5, 0, 655378, 5, 0, 655379, 5, 0, 655380, 6, 0, 655391, 7, 0, 655394, 11, 0, 655410, 11, 0, 655411, 3, 0, 720896, 4, 0, 720897, 5, 0, 720898, 5, 0, 720899, 5, 0, 720900, 5, 0, 720901, 5, 0, 720902, 5, 0, 720903, 5, 0, 720904, 5, 0, 720905, 5, 0, 720906, 5, 0, 720907, 5, 0, 720908, 5, 0, 720909, 5, 0, 720910, 5, 0, 720911, 5, 0, 720912, 5, 0, 720913, 5, 0, 720914, 5, 0, 720915, 5, 0, 720916, 6, 0, 720927, 11, 0, 720947, 11, 0, 720948, 3, 0, 786432, 4, 0, 786433, 5, 0, 786434, 5, 0, 786435, 5, 0, 786436, 5, 0, 786437, 5, 0, 786438, 5, 0, 786439, 5, 0, 786440, 5, 0, 786441, 5, 0, 786442, 5, 0, 786443, 5, 0, 786444, 5, 0, 786445, 5, 0, 786446, 5, 0, 786447, 5, 0, 786448, 5, 0, 786449, 5, 0, 786450, 5, 0, 786451, 5, 0, 786452, 6, 0, 786484, 11, 0, 786485, 3, 0, 851968, 4, 0, 851969, 5, 0, 851970, 5, 0, 851971, 5, 0, 851972, 5, 0, 851973, 5, 0, 851974, 5, 0, 851975, 5, 0, 851976, 5, 0, 851977, 5, 0, 851978, 5, 0, 851979, 5, 0, 851980, 5, 0, 851981, 5, 0, 851982, 5, 0, 851983, 5, 0, 851984, 5, 0, 851985, 5, 0, 851986, 5, 0, 851987, 5, 0, 851988, 6, 0, 852021, 11, 0, 852022, 3, 0, 917504, 4, 0, 917505, 5, 0, 917506, 5, 0, 917507, 5, 0, 917508, 5, 0, 917509, 5, 0, 917510, 5, 0, 917511, 5, 0, 917512, 5, 0, 917513, 5, 0, 917514, 5, 0, 917515, 5, 0, 917516, 5, 0, 917517, 5, 0, 917518, 5, 0, 917519, 5, 0, 917520, 5, 0, 917521, 5, 0, 917522, 5, 0, 917523, 5, 0, 917524, 6, 0, 917558, 11, 0, 983040, 8, 0, 983041, 9, 0, 983042, 9, 0, 983043, 9, 0, 983044, 9, 0, 983045, 9, 0, 983046, 9, 0, 983047, 9, 0, 983048, 9, 0, 983049, 9, 0, 983050, 9, 0, 983051, 9, 0, 983052, 9, 0, 983053, 9, 0, 983054, 9, 0, 983055, 9, 0, 983056, 9, 0, 983057, 9, 0, 983058, 9, 0, 983059, 9, 0, 983060, 10, 0, 1048631, 0, 0, 1048632, 1, 0, 1048633, 1, 0, 1048634, 2, 0, 1048637, 0, 0, 1048638, 1, 0, 1048639, 1, 0, 1048640, 1, 0, 1048641, 2, 0, 1114134, 0, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 1, 0, 1114145, 1, 0, 1114146, 1, 0, 1114147, 1, 0, 1114148, 1, 0, 1114149, 1, 0, 1114150, 1, 0, 1114151, 1, 0, 1114152, 1, 0, 1114153, 1, 0, 1114154, 1, 0, 1114155, 1, 0, 1114156, 1, 0, 1114157, 1, 0, 1114158, 1, 0, 1114159, 1, 0, 1114160, 1, 0, 1114161, 1, 0, 1114162, 1, 0, 1114163, 1, 0, 1114164, 2, 0, 1114167, 8, 0, 1114168, 9, 0, 1114169, 9, 0, 1114170, 10, 0, 1114173, 8, 0, 1114174, 9, 0, 1114175, 9, 0, 1114176, 9, 0, 1114177, 10, 0, 1179670, 8, 0, 1179671, 9, 0, 1179672, 9, 0, 1179673, 9, 0, 1179674, 9, 0, 1179675, 9, 0, 1179676, 9, 0, 1179677, 9, 0, 1179678, 9, 0, 1179679, 9, 0, 1179680, 9, 0, 1179681, 9, 0, 1179682, 9, 0, 1179683, 9, 0, 1179684, 9, 0, 1179685, 9, 0, 1179686, 9, 0, 1179687, 9, 0, 1179688, 9, 0, 1179689, 9, 0, 1179690, 9, 0, 1179691, 9, 0, 1179692, 9, 0, 1179693, 9, 0, 1179694, 9, 0, 1179695, 9, 0, 1179696, 9, 0, 1179697, 9, 0, 1179698, 9, 0, 1179699, 9, 0, 1179700, 10, 0 )
+
+[node name="Player" parent="TileMap" index="0"]
+position = Vector2( 27, 235.5 )
+
+[node name="Coin13" parent="coins" index="11"]
+position = Vector2( 1209, 590 )
+
+[node name="Coin14" parent="coins" index="12"]
+position = Vector2( 1398, 527 )
+
+[node name="Coin15" parent="coins" index="13"]
+position = Vector2( 1587, 463 )
+
+[node name="Coin16" parent="coins" index="14"]
+position = Vector2( 1719, 527 )
+
+[node name="Coin17" parent="coins" index="15"]
+position = Vector2( 1912, 653 )
+
+[node name="Coin18" parent="coins" index="16"]
+position = Vector2( 2096, 594 )
+
+[node name="Coin19" parent="coins" index="17"]
+position = Vector2( 2498, 527 )
+
+[node name="Coin20" parent="coins" index="18"]
+position = Vector2( 2536, 527 )
+
+[node name="Coin21" parent="coins" index="19"]
+position = Vector2( 2466, 527 )
+
+[node name="Coin22" parent="coins" index="20"]
+position = Vector2( 2405, 527 )
+
+[node name="Coin23" parent="coins" index="21"]
+position = Vector2( 2375, 527 )
+
+[node name="Coin24" parent="coins" index="22"]
+position = Vector2( 2340, 527 )
+
+[node name="Coin25" parent="coins" index="23"]
+position = Vector2( 2305, 527 )
+
+[node name="Coin26" parent="coins" index="24"]
+position = Vector2( 2269, 527 )
+
+[node name="Coin27" parent="coins" index="25"]
+position = Vector2( 2437, 527 )
+
+[node name="Coin28" parent="coins" index="26"]
+position = Vector2( 2646, 527 )
+
+[node name="Coin29" parent="coins" index="27"]
+position = Vector2( 2707, 527 )
+
+[node name="Coin30" parent="coins" index="28"]
+position = Vector2( 2753, 527 )
+
+[node name="Coin31" parent="coins" index="29"]
+position = Vector2( 2805, 527 )
+
+[node name="Portal" parent="coins" index="31"]
+position = Vector2( 3252, 1158 )
+NEXT_LEVEL = "res://Worlds/World_03.tscn"
+
+[node name="Ship7" parent="Ship" index="2" instance=ExtResource( 2 )]
+position = Vector2( 1749, 180 )
+
+[node name="Ship8" parent="Ship" index="3" instance=ExtResource( 2 )]
+position = Vector2( 1767, 180 )
+
+[node name="Ship9" parent="Ship" index="4" instance=ExtResource( 2 )]
+position = Vector2( 1803, 180 )
+
+[node name="Ship10" parent="Ship" index="5" instance=ExtResource( 2 )]
+position = Vector2( 1821, 180 )
+
+[node name="Ship11" parent="Ship" index="6" instance=ExtResource( 2 )]
+position = Vector2( 1785, 180 )
+
+[node name="Ship12" parent="Ship" index="7" instance=ExtResource( 2 )]
+position = Vector2( 1839, 180 )
+
+[node name="Ship13" parent="Ship" index="8" instance=ExtResource( 2 )]
+position = Vector2( 1857, 180 )
+
+[node name="Ship14" parent="Ship" index="9" instance=ExtResource( 2 )]
+position = Vector2( 1560, 120 )
+
+[node name="Ship15" parent="Ship" index="10" instance=ExtResource( 2 )]
+position = Vector2( 1578, 120 )
+
+[node name="Ship16" parent="Ship" index="11" instance=ExtResource( 2 )]
+position = Vector2( 1614, 120 )
+
+[node name="Ship17" parent="Ship" index="12" instance=ExtResource( 2 )]
+position = Vector2( 1632, 120 )
+
+[node name="Ship18" parent="Ship" index="13" instance=ExtResource( 2 )]
+position = Vector2( 1596, 120 )
+
+[node name="Ship19" parent="Ship" index="14" instance=ExtResource( 2 )]
+position = Vector2( 1650, 120 )
+
+[node name="Ship20" parent="Ship" index="15" instance=ExtResource( 2 )]
+position = Vector2( 1668, 120 )
+
+[node name="Ship21" parent="Ship" index="16" instance=ExtResource( 2 )]
+position = Vector2( 1240, 57 )
+
+[node name="Ship22" parent="Ship" index="17" instance=ExtResource( 2 )]
+position = Vector2( 1258, 57 )
+
+[node name="Ship23" parent="Ship" index="18" instance=ExtResource( 2 )]
+position = Vector2( 1294, 57 )
+
+[node name="Ship24" parent="Ship" index="19" instance=ExtResource( 2 )]
+position = Vector2( 1312, 57 )
+
+[node name="Ship25" parent="Ship" index="20" instance=ExtResource( 2 )]
+position = Vector2( 1276, 57 )
+
+[node name="Ship26" parent="Ship" index="21" instance=ExtResource( 2 )]
+position = Vector2( 1330, 57 )
+
+[node name="Ship27" parent="Ship" index="22" instance=ExtResource( 2 )]
+position = Vector2( 1348, 57 )
+
+[node name="Ship28" parent="Ship" index="23" instance=ExtResource( 2 )]
+position = Vector2( 1437, 53 )
+
+[node name="Ship29" parent="Ship" index="24" instance=ExtResource( 2 )]
+position = Vector2( 1455, 53 )
+
+[node name="Ship30" parent="Ship" index="25" instance=ExtResource( 2 )]
+position = Vector2( 1473, 53 )
+
+[node name="Ship31" parent="Ship" index="26" instance=ExtResource( 2 )]
+position = Vector2( 2846, 120 )
+
+[node name="Ship32" parent="Ship" index="27" instance=ExtResource( 2 )]
+position = Vector2( 2864, 120 )
+
+[node name="Ship33" parent="Ship" index="28" instance=ExtResource( 2 )]
+position = Vector2( 2882, 120 )
+
+[node name="Ship7" parent="." index="8"]
+position = Vector2( 2143, 720 )
+
+[node name="Ship8" parent="." index="9"]
+position = Vector2( 2161, 720 )
+
+[node name="Ship9" parent="." index="10"]
+position = Vector2( 2197, 720 )
+
+[node name="Ship10" parent="." index="11"]
+position = Vector2( 2215, 720 )
+
+[node name="Ship11" parent="." index="12"]
+position = Vector2( 2179, 720 )
+
+[node name="Ship12" parent="." index="13"]
+position = Vector2( 2233, 720 )
+
+[node name="Ship13" parent="." index="14"]
+position = Vector2( 2251, 720 )
+
+[node name="Ship14" parent="." index="15"]
+position = Vector2( 1933, 1174 )
+
+[node name="Ship15" parent="." index="16"]
+position = Vector2( 2250, 1174 )
+
+[node name="Ship16" parent="." index="17"]
+position = Vector2( 2695, 1174 )
+
+[node name="Ship17" parent="." index="18"]
+position = Vector2( 2677, 1174 )
+
+[node name="enemy" parent="enemy" index="0"]
+position = Vector2( 3974, 1089 )
+
+[node name="enemy2" parent="enemy" index="1"]
+position = Vector2( 3521, 1073 )
+
+[node name="enemy3" parent="enemy" index="2"]
+position = Vector2( 2603, 527 )
