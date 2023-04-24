@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://AubreyPro.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Script/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Script/Option_Control.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 90
@@ -80,6 +81,7 @@ text = "Выход"
 visible = false
 margin_right = 384.0
 margin_bottom = 720.0
+script = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="MainMenu/Option_Control"]
 modulate = Color( 0.866667, 0.184314, 0.537255, 0.72549 )
@@ -143,7 +145,3 @@ margin_bottom = 82.0
 [connection signal="pressed" from="MainMenu/Panel/Start" to="MainMenu" method="_on_Start_pressed"]
 [connection signal="pressed" from="MainMenu/Panel/Settings" to="MainMenu" method="_on_Settings_pressed"]
 [connection signal="pressed" from="MainMenu/Panel/Exit" to="MainMenu" method="_on_Exit_pressed"]
-[connection signal="item_selected" from="MainMenu/Option_Control/Panel/LB_Video/Option_Resolution" to="MainMenu/Option_Control" method="_on_Option_Resolution_item_selected"]
-[connection signal="toggled" from="MainMenu/Option_Control/Panel/LB_Video/CB_FS" to="MainMenu/Option_Control" method="_on_CheckBox_toggled"]
-[connection signal="pressed" from="MainMenu/Option_Control/Panel/Button_Return" to="MainMenu/Option_Control" method="_on_Return_pressed"]
-[connection signal="pressed" from="MainMenu/Option_Control/Panel/Button_Save" to="MainMenu/Option_Control" method="_on_Save_pressed"]
