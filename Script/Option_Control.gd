@@ -5,7 +5,7 @@ var resolutions_variants = {
 	"1280x720": Vector2(1280, 720),
 	"1440x900": Vector2(1440, 900),
 }
-var _tmp_resolution
+var _tmp_resolution = 0
 func set_tmp_resolution(idx):
 	_tmp_resolution = idx
 
@@ -13,6 +13,7 @@ func _ready():
 	for _res in resolutions_variants:
 		_resolution.add_item(_res)
 		pass
+	_resolution.select(1)
 	_resolution.connect("item_selected", self, "set_tmp_resolution")
 	$"%Button_Save".connect("button_down", self, "_on_confirmation")
 	$"%Button_Return".connect("button_down", self, "_on_return")
@@ -21,9 +22,10 @@ func _ready():
 func _on_confirmation():
 	Global.SETTINGS.resolution = resolutions_variants.values()[_tmp_resolution]
 	Global.SETTINGS.save_settings()
+	hide()
 	pass
 
 func _on_return():
-	_tmp_resolution = null
+	_tmp_resolution = 0
 	hide()
 	pass
