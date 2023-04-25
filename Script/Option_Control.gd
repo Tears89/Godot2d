@@ -2,8 +2,13 @@ extends Control
 
 onready var _resolution = $Panel/VBoxContainer/MarginContainer/VBoxContainer/ResolutionContainer/Option_Resolution
 var resolutions_variants = {
+	"640x480": Vector2(640, 480),
+	"800x600": Vector2(800, 600),
 	"1280x720": Vector2(1280, 720),
+	"1366x768": Vector2(1366, 768),
 	"1440x900": Vector2(1440, 900),
+	"1600x900": Vector2(1600, 900),
+	"1920x1080": Vector2(1920, 1080),
 }
 var _tmp_resolution = 0
 func set_tmp_resolution(idx):
