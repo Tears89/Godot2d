@@ -9,7 +9,7 @@ const Floor = Vector2(0, -1)
 export var DAMAGE_AMOUNT = 50
 
 func _ready():
-	$Sprite.play("run")
+#	$Sprite.play("run")
 	$Area2D.connect("body_entered", self, "_on_body_entered")
 	
 

@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var coins = 0
+onready var pause_menu = $"%PauseMenu"
 
 func _ready():
 	$Coins.text = String(coins) 

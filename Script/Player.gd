@@ -14,11 +14,15 @@ var Coin = 0
 var Health = 100
 
 func _ready():
+	#HACK:
+	if not Global.is_game_started:
+		Global.start_game()
+	
 	Health = Global.Health
 
 func _physics_process(delta):
-	Movement = move_and_slide(Movement, UP)
 	Movement.y +=Gravity
+	Movement = move_and_slide(Movement, UP)
 	Keyboard()
 	if position.y > get_viewport_rect().size.y:
 		Global.reset_coins()
