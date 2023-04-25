@@ -29,3 +29,7 @@ func _on_return():
 	_tmp_resolution = 0
 	hide()
 	pass
+
+
+func _on_CB_FS_toggled(button_pressed):
+	OS.set_window_fullscreen(button_pressed)

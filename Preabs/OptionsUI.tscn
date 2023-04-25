@@ -102,3 +102,5 @@ margin_right = 364.0
 margin_bottom = 67.0
 custom_fonts/font = SubResource( 5 )
 text = "во весь экран"
+
+[connection signal="toggled" from="Panel/VBoxContainer/MarginContainer/VBoxContainer/CB_FS" to="." method="_on_CB_FS_toggled"]

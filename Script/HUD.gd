@@ -14,3 +14,6 @@ func set_coins(value):
 #	coins = coins + 1
 	$Coins.text = str(value)
 #	_ready()
+
+
+
