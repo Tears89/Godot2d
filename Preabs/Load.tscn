@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Script/load.gd" type="Script" id=1]
+[ext_resource path="res://AubreyPro.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0862745, 0.227451, 0.454902, 1 )
@@ -36,6 +41,14 @@ modulate = Color( 0.866667, 0.184314, 0.537255, 0.72549 )
 self_modulate = Color( 0.866667, 0.184314, 0.537255, 0.72549 )
 margin_right = 1280.0
 margin_bottom = 720.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 320.0
+margin_top = 488.0
+margin_right = 960.0
+margin_bottom = 626.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "Цель игрока - собирать монетки, и преодолевая препятствия и избегая ловушек на пути, и достичь финиша в конце каждого уровня. Уровни будут становиться все сложнее и сложнее, поэтому игрок должен использовать свою ловкость и находчивость, чтобы преодолеть все препятствия и завершить игру."
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = 320.0

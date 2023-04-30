@@ -1,7 +1,7 @@
 extends Control
 
 export var next_scene = ""
-var load_time = 3
+var load_time = 5
 onready var tween = $Tween
 
 func _ready():
