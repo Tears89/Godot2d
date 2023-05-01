@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Game 2d"
-run/main_scene="res://Preabs/Load.tscn"
+run/main_scene="res://Preabs/Intro.tscn"
 config/icon="res://icon.png"
 
 [autoload]

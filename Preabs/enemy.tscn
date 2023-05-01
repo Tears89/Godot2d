@@ -60,7 +60,7 @@ animations = [ {
 extents = Vector2( 12, 14.3941 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 23, 21.7339 )
+extents = Vector2( 16, 15.7339 )
 
 [node name="enemy" type="KinematicBody2D"]
 collision_layer = 8
@@ -69,7 +69,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "run "
-frame = 3
+frame = 1
 playing = true
 flip_h = true
 
@@ -86,5 +86,5 @@ cast_to = Vector2( -0.0315247, 16.4086 )
 collision_layer = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, -6.26605 )
+position = Vector2( 0, -0.266075 )
 shape = SubResource( 13 )
