@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://AubreyPro.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Script/Konec.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="konec" type="Node"]
+
+[node name="Konec" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="Konec"]
+modulate = Color( 0.866667, 0.184314, 0.537255, 0.72549 )
+self_modulate = Color( 0.866667, 0.184314, 0.537255, 0.72549 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Konec/Panel"]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 1024.0
+margin_bottom = 576.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "\"Поздравляем вас с завершением игры! Вы проявили большую решительность и мастерство, преодолевая трудности и препятствия, которые мы создали. Мы надеемся, что вам было интересно и приятно играть, и что вы чувствуете удовлетворение от победы. Спасибо, что играете и поддерживаете нашу игру - без вас мы не смогли бы этого добиться. Мы надеемся, что вы продолжите исследовать новые миры, которые мы создаем, и с нетерпением ждем возможности подарить вам еще больше захватывающих игровых впечатлений в будущем!\".
+"
+
+[node name="Exit" type="Button" parent="Konec/Panel"]
+margin_left = 384.0
+margin_top = 576.0
+margin_right = 896.0
+margin_bottom = 640.0
+custom_fonts/font = SubResource( 2 )
+text = "Выход"
+
+[connection signal="pressed" from="Konec/Panel/Exit" to="Konec" method="_on_Exit_pressed"]

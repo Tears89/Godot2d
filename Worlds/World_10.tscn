@@ -84,7 +84,7 @@ scale = Vector2( 2, 2 )
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 914, -339 )
-NEXT_LEVEL = "res://Worlds/World_02.tscn"
+NEXT_LEVEL = "res://Preabs/konec.tscn"
 
 [node name="ships" type="Node2D" parent="."]
 
