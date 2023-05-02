@@ -1,0 +1,107 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Tailsets/TileSet_01.tres" type="TileSet" id=1]
+[ext_resource path="res://Preabs/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Preabs/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Preabs/Ship.tscn" type="PackedScene" id=4]
+[ext_resource path="res://AubreyPro.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Graphics/vrag/razgovor.png" type="Texture" id=6]
+[ext_resource path="res://Preabs/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Preabs/enemy.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[node name="World_01" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -105, 102 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131067, 7, 0, 196603, 7, 0, 196607, 0, 0, 131072, 1, 0, 131073, 2, 0, 262139, 7, 0, 262143, 4, 0, 196608, 5, 0, 196609, 23, 0, 196610, 2, 0, 327672, 12, 0, 327673, 13, 0, 327674, 13, 0, 327675, 9, 0, 327676, 14, 0, 327679, 4, 0, 262144, 9, 0, 262145, 9, 0, 262146, 9, 0, 262147, 14, 0, 393215, 7, 0, 458750, 12, 0, 458751, 10, 0, 589819, 12, 0, 589820, 13, 0, 589821, 13, 0, 589822, 13, 0, 589823, 13, 0, 524288, 13, 0, 524289, 13, 0, 524290, 13, 0, 524296, 12, 0, 524297, 13, 0, 524298, 13, 0, 524299, 14, 0 )
+
+[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 17.5, 45.5 )
+
+[node name="Razgovor2" type="Sprite" parent="TileMap"]
+position = Vector2( -189.875, 121.125 )
+scale = Vector2( 0.553571, 0.518293 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Label" type="Label" parent="TileMap/Razgovor2"]
+margin_left = -18.9678
+margin_top = -49.2
+margin_right = 21.0322
+margin_bottom = -31.2
+custom_fonts/font = SubResource( 1 )
+text = "норм"
+
+[node name="Razgovor" type="Sprite" parent="TileMap"]
+position = Vector2( -228.875, 121.125 )
+scale = Vector2( 0.553571, 0.518293 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="TileMap/Razgovor"]
+margin_left = -30.7097
+margin_top = -50.1647
+margin_right = 28.2903
+margin_bottom = -32.1647
+custom_fonts/font = SubResource( 2 )
+text = "ты как?"
+
+[node name="coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -87, 441 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin2" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -49, 440 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin3" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -9, 439 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin4" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 29, 440 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin5" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 69, 439 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin6" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 448, 474 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin7" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 449, 588 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin8" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 553, 588 )
+scale = Vector2( 2, 2 )
+
+[node name="Portal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 613, 586 )
+NEXT_LEVEL = "res://Worlds/World_07.tscn"
+
+[node name="ships" type="Node2D" parent="."]
+
+[node name="Ship" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( -376, 151 )
+
+[node name="Ship2" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( -409, 151 )
+
+[node name="enemys" type="Node2D" parent="."]
+
+[node name="enemy" parent="enemys" instance=ExtResource( 9 )]
+position = Vector2( 47, 590 )

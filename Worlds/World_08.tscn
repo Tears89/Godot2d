@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tailsets/TileSet_01.tres" type="TileSet" id=1]
+[ext_resource path="res://Preabs/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Preabs/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Preabs/Ship.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Preabs/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Preabs/enemy.tscn" type="PackedScene" id=9]
+
+[node name="World_01" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -105, 102 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -65539, 0, 0, -65538, 13, 0, -65537, 2, 0, -3, 7, 0, -1, 7, 0, 65533, 7, 0, 65535, 7, 0, 131069, 7, 0, 131071, 7, 0, 196605, 7, 0, 196607, 7, 0, 262141, 7, 0, 262143, 7, 0, 327677, 7, 0, 327679, 7, 0, 393213, 7, 0, 393215, 7, 0, 458749, 7, 0, 458751, 7, 0, 524285, 7, 0, 524287, 7, 0, 589821, 7, 0, 589823, 7, 0, 655357, 8, 0, 655358, 13, 0, 655359, 10, 0 )
+
+[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( -48, -12.5 )
+
+[node name="coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -201, 565 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin2" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -200, 490 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin3" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -199, 407 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin4" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -198, 325 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin5" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -197, 235 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin6" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -201, 150 )
+scale = Vector2( 2, 2 )
+
+[node name="Portal" parent="." instance=ExtResource( 8 )]
+position = Vector2( -201, 653 )
+NEXT_LEVEL = "res://Worlds/World_09.tscn"
+
+[node name="ships" type="Node2D" parent="."]
+
+[node name="Ship" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( -198, -39 )
+
+[node name="enemys" type="Node2D" parent="."]
+
+[node name="enemy" parent="enemys" instance=ExtResource( 9 )]
+position = Vector2( -198, -45 )

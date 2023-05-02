@@ -71,6 +71,7 @@ position = Vector2( 2805, 527 )
 
 [node name="Portal" parent="coins" index="31"]
 position = Vector2( 3252, 1158 )
+NEXT_LEVEL = "res://Worlds/World_04.tscn"
 
 [node name="Ship7" parent="Ship" index="2" instance=ExtResource( 2 )]
 position = Vector2( 1749, 180 )

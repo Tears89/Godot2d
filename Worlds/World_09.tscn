@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tailsets/TileSet_01.tres" type="TileSet" id=1]
+[ext_resource path="res://Preabs/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Preabs/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Preabs/Ship.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Preabs/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Preabs/enemy.tscn" type="PackedScene" id=9]
+
+[node name="World_01" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -105, 102 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -65514, 3, 0, 22, 7, 0, 65548, 3, 0, 65552, 12, 0, 65553, 13, 0, 65554, 13, 0, 65555, 14, 0, 65558, 7, 0, 131074, 12, 0, 131075, 13, 0, 131076, 14, 0, 131080, 3, 0, 131084, 7, 0, 131094, 7, 0, 196616, 7, 0, 196620, 7, 0, 196630, 7, 0, 327677, 12, 0, 327678, 13, 0, 327679, 14, 0, 262152, 7, 0, 262156, 7, 0, 262166, 7, 0, 327688, 7, 0, 327692, 7, 0, 327702, 7, 0, 393218, 12, 0, 393219, 13, 0, 393220, 14, 0, 393224, 7, 0, 393228, 7, 0, 393238, 7, 0, 458760, 7, 0, 458764, 7, 0, 458774, 7, 0, 589823, 12, 0, 524288, 13, 0, 524289, 14, 0, 524296, 7, 0, 524300, 7, 0, 524310, 7, 0, 589832, 7, 0, 589836, 7, 0, 589846, 7, 0, 655368, 7, 0, 655372, 7, 0, 655382, 7, 0, 720904, 7, 0, 720908, 7, 0, 720918, 7, 0, 786440, 11, 0, 786444, 11, 0, 786454, 11, 0 )
+
+[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 17, 237.5 )
+
+[node name="coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 119, 459 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin2" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( -198, 336 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin3" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 119, 206 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin4" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 455, 214 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin5" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 687, 149 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin6" parent="coins" instance=ExtResource( 3 )]
+position = Vector2( 1048, 147 )
+scale = Vector2( 2, 2 )
+
+[node name="Portal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1336, 13 )
+NEXT_LEVEL = "res://Worlds/World_10.tscn"
+
+[node name="ships" type="Node2D" parent="."]
+
+[node name="Ship" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( 420, 216 )
+
+[node name="Ship2" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( 714, 151 )
+
+[node name="Ship3" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( 996, 151 )
+
+[node name="Ship4" parent="ships" instance=ExtResource( 4 )]
+position = Vector2( 1103, 151 )
+
+[node name="enemys" type="Node2D" parent="."]
+
+[node name="enemy" parent="enemys" instance=ExtResource( 9 )]
+position = Vector2( 55, 469 )
+
+[node name="enemy2" parent="enemys" instance=ExtResource( 9 )]
+position = Vector2( -268, 338 )
+
+[node name="enemy3" parent="enemys" instance=ExtResource( 9 )]
+position = Vector2( 54, 212 )
+
+[node name="enemy4" parent="enemys" instance=ExtResource( 9 )]
+position = Vector2( 1046, 145 )
