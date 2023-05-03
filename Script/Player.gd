@@ -23,7 +23,6 @@ func _ready():
 func _physics_process(delta):
 	Movement.y +=Gravity
 	Movement = move_and_slide(Movement, UP)
-	Keyboard()
 	if position.y > get_viewport_rect().size.y:
 		Global.reset_coins()
 		get_tree().reload_current_scene()
@@ -62,18 +61,13 @@ func ApplyDmg(dmg :int):
 		Health = 0
 #		Global.Health = 0
 		Global.reset_health()
-		get_tree().reload_current_scene()
-	
-	if Coin <= 0:
 		Coin = 0
 		Global.reset_coins()
-		
+		get_tree().reload_current_scene()
+	
 
-func Keyboard():
-	
-	
-	
-	pass
+
+
 
 
 
