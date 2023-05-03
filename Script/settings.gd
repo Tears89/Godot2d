@@ -5,7 +5,10 @@ const DEFAULT_RESOLUTION = Vector2(1280, 720)
 var resolution = DEFAULT_RESOLUTION setget set_resolution
 func set_resolution(value):
 	resolution = value
-	OS.set_window_size(value)
+	if OS.is_window_fullscreen():
+		Global.get_viewport().size = value
+	else:
+		OS.set_window_size(value)
 	pass
 
 
